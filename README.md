@@ -5,17 +5,17 @@ O <strong>PetGree</strong> tem como proposta a automatização do gerenciamento 
 ## 📷 Screenshots
 
   <div align="left">
-  <img src="https://github.com/raulval/PetGree/tree/main/Telas/Login.png" title="Login" />
+  <img src="https://github.com/raulval/PetGree/blob/main/Telas/Login.png" alt="Login" width="700px" />
   <div align="left">
-  <img src="https://github.com/raulval/PetGree/tree/main/Telas/Dashboard.png" title="Dashboard" />
+  <img src="https://github.com/raulval/PetGree/blob/main/Telas/Dashboard.png" alt="Dashboard" width="700px" />
   <div align="left">
-  <img src="https://github.com/raulval/PetGree/tree/main/Telas/Clientes.png" title="Clientes" />
+  <img src="https://github.com/raulval/PetGree/blob/main/Telas/Clientes.png" alt="Clientes" width="700px" />
   <div align="left">
-  <img src="https://github.com/raulval/PetGree/tree/main/Telas/Animais.png" title="Animais" />
+  <img src="https://github.com/raulval/PetGree/blob/main/Telas/Animais.png" alt="Animais" width="700px" />
   <div align="left">
-  <img src="https://github.com/raulval/PetGree/tree/main/Telas/Funcionarios.png" title="Funcionarios" />
+  <img src="https://github.com/raulval/PetGree/blob/main/Telas/Funcionarios.png" alt="Funcionarios" width="700px" />
   <div align="left">
-  <img src="https://github.com/raulval/PetGree/tree/main/Telas/Serviços.png" title="Serviços" />
+  <img src="https://github.com/raulval/PetGree/blob/main/Telas/Serviços.png" alt="Serviços" width="700px" />
 
 ## 🚀 Tecnologias
 
