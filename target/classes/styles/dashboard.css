@@ -1,0 +1,15 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.dashBoard {
+  -fx-background-color: linear-gradient(to right, #c41a21, #ad171e);
+}
+.dashboard_menu_items:hover{
+  -fx-background-color: #f5222d;  
+  -fx-border-width: 0px 4px 0px 0px;
+  -fx-border-color: #fff
+}

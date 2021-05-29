@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.utfpr.carloseduardofreitas.petgree.controller.DashboardController">
+   <left>
+      <VBox maxWidth="166.0" prefHeight="768.0" prefWidth="166.0" styleClass="dashBoard" stylesheets="@../styles/dashboard.css" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="150.0" style="-fx-alignment: CENTER;">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-alignment: center;">
+                     <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="PAW" size="20">
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </FontAwesomeIconView>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="PetGree">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+               </children></HBox>
+            <HBox prefHeight="60.0" prefWidth="150.0" style="-fx-alignment: center;">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="btnDashboard" onMouseClicked="#handleOpenDashboard" prefHeight="75.0" prefWidth="150.0" style="-fx-alignment: center;" styleClass="dashboard_menu_items">
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="DASHBOARD">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard" wrappingWidth="81.0" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="btnClientes" onMouseClicked="#handleOpenClientes" prefHeight="60.0" prefWidth="150.0" style="-fx-alignment: center;" styleClass="dashboard_menu_items">
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="USERS">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Clientes" wrappingWidth="81.0" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="btnAnimais" onMouseClicked="#handleOpenAnimais" prefHeight="60.0" prefWidth="150.0" style="-fx-alignment: center;" styleClass="dashboard_menu_items">
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="PAW">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Animais" wrappingWidth="81.0" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="btnUsuarios" onMouseClicked="#handleOpenUsuarios" prefHeight="60.0" prefWidth="150.0" style="-fx-alignment: center;" styleClass="dashboard_menu_items">
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="BRIEFCASE">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Funcionários" wrappingWidth="81.0" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="btnAgendamentos" onMouseClicked="#handleOpenAgendamentos" prefHeight="60.0" prefWidth="150.0" style="-fx-alignment: center;" styleClass="dashboard_menu_items">
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="STETHOSCOPE">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Agendamentos" wrappingWidth="81.0" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="btnServicos" onMouseClicked="#handleOpenServicos" prefHeight="60.0" prefWidth="150.0" style="-fx-alignment: center;" styleClass="dashboard_menu_items">
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CUBES">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Serviços" wrappingWidth="81.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="60.0" prefWidth="150.0" style="-fx-alignment: center;" />
+            <HBox prefHeight="60.0" prefWidth="150.0" style="-fx-alignment: center;" />
+            <HBox fx:id="btnSair" onMouseClicked="#handleSignOut" prefHeight="60.0" prefWidth="150.0" style="-fx-alignment: center;" styleClass="dashboard_menu_items">
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Sair" wrappingWidth="81.0" />
+               </children>
+            </HBox>
+            <HBox maxHeight="60.0" maxWidth="150.0" prefHeight="60.0" prefWidth="150.0" style="-fx-alignment: center-left;">
+               <children>
+                  <Circle fx:id="imgUser" fill="WHITE" radius="15.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Circle>
+                  <Text fx:id="textNome" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Alice D.">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

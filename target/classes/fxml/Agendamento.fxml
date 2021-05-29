@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1200.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.utfpr.carloseduardofreitas.petgree.controller.AgendamentoController">
+    <stylesheets>
+        <URL value="@/styles/clientes.css" />
+    </stylesheets>
+    <children>
+        <AnchorPane style="-fx-background-color: #fff;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Text fill="#c41a21" layoutX="47.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AGENDAMENTOS" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="20.734375">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Text>
+                <Text fx:id="txtData" fill="#6b6b6b" layoutX="47.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="30/04/2021" AnchorPane.leftAnchor="30.0" />
+            </children>
+            <padding>
+                <Insets bottom="25.0" />
+            </padding>
+        </AnchorPane>
+        <AnchorPane layoutX="5.0" layoutY="87.0" />
+        <TableView fx:id="tableView" layoutX="30.0" layoutY="194.0" onMouseClicked="#atualizarSelecionado" prefHeight="492.0" prefWidth="1140.0" AnchorPane.bottomAnchor="76.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="200.0">
+            <columns>
+            </columns>
+            <contextMenu>
+                <ContextMenu>
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Alterar">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="PENCIL" />
+                            </graphic></MenuItem>
+                        <MenuItem mnemonicParsing="false" text="Excluir">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="TRASH" />
+                            </graphic></MenuItem>
+
+                    </items>
+                </ContextMenu>
+            </contextMenu>
+        </TableView>
+        <HBox fx:id="hBoxPesquisa" layoutX="30.0" layoutY="135.0" prefHeight="25.0" prefWidth="589.0" style="-fx-alignment: center-left;" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="581.0" AnchorPane.topAnchor="160.0">
+            <children>
+                <FontAwesomeIconView glyphName="SEARCH" />
+            <DatePicker fx:id="datePickerAgendamento" onAction="#atualizarTabela" promptText="Pesquisar agendamento">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </DatePicker>
+            <Separator orientation="VERTICAL" prefHeight="200.0">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Separator>
+            <Button fx:id="btnLimpar1" mnemonicParsing="false" onAction="#limpar" prefHeight="25.0" prefWidth="70.0" text="Limpar">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <graphic>
+                  <FontAwesomeIconView glyphName="CLOSE" />
+               </graphic>
+            </Button>
+            </children>
+        </HBox>
+        <Text fill="#6b6b6b" layoutX="61.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total de Agendamentos encontrados:" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="110.0" />
+        <Button fx:id="btnAlterar" layoutX="1060.0" layoutY="693.0" mnemonicParsing="false" onAction="#alterar" prefHeight="43.0" prefWidth="110.0" style="-fx-background-color: #27ae60;" text="Alterar" textFill="WHITE" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="30.0">
+            <graphic>
+                <FontAwesomeIconView fill="WHITE" glyphName="PENCIL" />
+            </graphic>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <Button fx:id="btnExcluir" layoutX="934.0" layoutY="693.0" mnemonicParsing="false" onAction="#excluir" prefHeight="43.0" prefWidth="110.0" style="-fx-background-color: #e74c3c;" text="Excluir" textFill="WHITE" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="150.0">
+            <graphic>
+                <FontAwesomeIconView fill="WHITE" glyphName="TRASH" />
+            </graphic>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <HBox layoutX="631.0" layoutY="160.0" style="-fx-alignment: center;" />
+        <Button fx:id="btnAdicionar" layoutX="30.0" layoutY="693.0" mnemonicParsing="false" onAction="#adicionar" prefHeight="43.0" prefWidth="110.0" style="-fx-background-color: #3498db;" text="Adicionar" textFill="WHITE" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="30.0">
+            <graphic>
+                <FontAwesomeIconView fill="WHITE" glyphName="PLUS" />
+            </graphic>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+      <HBox alignment="TOP_RIGHT" layoutX="937.0" layoutY="120.0" prefHeight="17.0" prefWidth="239.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="110.0">
+         <children>
+            <Text fill="#6b6b6b" strokeType="OUTSIDE" strokeWidth="0.0" text="Aualizado em:" />
+            <Text fx:id="textDia" fill="#6b6b6b" strokeType="OUTSIDE" strokeWidth="0.0" text="Dia">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Text>
+            <Text fill="#6b6b6b" strokeType="OUTSIDE" strokeWidth="0.0" text="às">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Text>
+            <Text fx:id="textHoras" fill="#6b6b6b" strokeType="OUTSIDE" strokeWidth="0.0" text="Horas">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+      <Text fx:id="textQtd" fill="#6b6b6b" layoutX="238.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" AnchorPane.topAnchor="110.0" />
+      <HBox layoutX="885.0" layoutY="160.0" style="-fx-alignment: center;" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="160.0">
+         <children>
+            <Text fill="#6b6b6b" strokeType="OUTSIDE" strokeWidth="0.0" text="Pesquisar por:">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Text>
+            <ComboBox fx:id="cbPesquisa" onAction="#atualizarAgendamentos" prefHeight="25.0" prefWidth="180.0">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </ComboBox>
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </HBox>
+      <HBox fx:id="hBoxInicio" layoutX="30.0" layoutY="173.0" prefHeight="25.0" prefWidth="199.0" style="-fx-alignment: center-left;" visible="false" AnchorPane.topAnchor="160.0">
+         <children>
+            <FontAwesomeIconView glyphName="SEARCH">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </FontAwesomeIconView>
+            <DatePicker fx:id="datePickerInicio" onAction="#atualizarTabela" promptText="Início">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </DatePicker>
+         </children>
+      </HBox>
+      <HBox fx:id="hBoxFim" layoutX="244.0" layoutY="160.0" prefHeight="25.0" prefWidth="329.0" style="-fx-alignment: center-left;" visible="false" AnchorPane.leftAnchor="234.0">
+         <children>
+            <Separator prefWidth="10.0">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Separator>
+            <DatePicker fx:id="datePickerFim" onAction="#atualizarTabela" promptText="Fim">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </DatePicker>
+            <Separator orientation="VERTICAL" prefHeight="200.0">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Separator>
+            <Button fx:id="btnLimpar2" mnemonicParsing="false" onAction="#limpar" prefHeight="25.0" prefWidth="70.0" text="Limpar" visible="false">
+               <graphic>
+                  <FontAwesomeIconView glyphName="CLOSE" />
+               </graphic>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+    </children>
+</AnchorPane>
