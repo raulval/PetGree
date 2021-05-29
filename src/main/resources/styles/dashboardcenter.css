@@ -1,0 +1,31 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.card1{
+    -fx-background-color: linear-gradient(to right, #2c3e50, #5B5B8A);
+    -fx-background-radius: 10px;
+}
+.card2{
+    -fx-background-color: linear-gradient(to right, #248C50, #5EC489);
+    -fx-background-radius: 10px;
+}
+.card3{
+    -fx-background-color: linear-gradient(to right,#C77024, #F0984A);
+    -fx-background-radius: 10px;
+}
+.card4{
+    -fx-background-color: linear-gradient(to right, #535c68,#68788C);
+    -fx-background-radius: 10px;
+}
+.card5{
+    -fx-background-color: linear-gradient(to right, #1A3384,#2B49B3);
+    -fx-background-radius: 8px;
+}
+.card6{
+    -fx-background-color: linear-gradient(to right, #c0392b,#e74c3c);
+    -fx-background-radius: 8px;
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.utfpr.carloseduardofreitas.petgree.controller.TesteController">
+   <children>
+      <Button layoutX="173.0" layoutY="149.0" mnemonicParsing="false" onAction="#salvarRegistro" prefHeight="43.0" prefWidth="110.0" text="Salvar">
+         <graphic>
+            <FontAwesomeIconView glyphName="TRASH"/>
+         </graphic></Button>
+      <Text layoutX="39.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descrição:" AnchorPane.leftAnchor="16.0" />
+      <TextField fx:id="descricao" layoutX="79.0" layoutY="48.0" />
+      <TableView fx:id="tableView" layoutX="27.0" layoutY="151.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Button layoutX="312.0" layoutY="149.0" mnemonicParsing="false" onAction="#salvarRegistro" prefHeight="43.0" prefWidth="110.0" text="Excluir">
+         <graphic>
+            <FontAwesomeIconView glyphName="TRASH" />
+         </graphic></Button>
+ 
+   </children>
+</AnchorPane>
